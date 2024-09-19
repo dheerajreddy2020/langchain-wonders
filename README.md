@@ -23,4 +23,4 @@ This project is a chatbot powered by FastAPI, LangChain, and OpenAI's GPT model.
 1. Clone the repository:
    ```bash
    git clone https://github.com/dheerajreddy2020/langchain-wonders.git
-   cd fastapi-langchain-wonders
+   cd langchain-wonders
