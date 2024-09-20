@@ -15,7 +15,7 @@ This project is a chatbot powered by FastAPI, LangChain, and OpenAI's GPT model.
 
 - **Docker** (For containerized deployment)
 - **Python 3.9+** (For running locally without Docker)
-- **OpenAI API Key** (For GPT-3 interaction)
+- **OpenAI API Key** (For GPT-4 interaction)
 - **LangSmith API Key** (For conversation logging)
 
 ### Setup
