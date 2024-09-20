@@ -1,17 +1,20 @@
-# Use official Python image
-FROM python:3.9-slim
+# Use an official Python runtime as a parent image
+FROM python:3.9
 
-# Set working directory
+# Set the working directory
 WORKDIR /app
 
-# Copy all files
-COPY . .
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-# Install any dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies
+RUN python -m pip install -U pip
 
-# Expose the port FastAPI will run on
-EXPOSE 8000
+# Install Python dependencies
+RUN pip install -r requirements.txt
 
-# Command to run FastAPI
-CMD ["python", "./app/app.py"]
+# Expose ports
+EXPOSE 3000 8000
+
+# Command to run FastAPI and Python HTTP server
+CMD ["sh", "-c", "python ./app/app.py --host 0.0.0.0 --port 8000 & python -m http.server 3000 --directory frontend"]

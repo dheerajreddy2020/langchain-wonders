@@ -1,7 +1,8 @@
 fastapi
 uvicorn
-langchain
 openai
-langchain_openai
+langchain
+langchain-community
+langchain-openai
 langsmith
 python-dotenv
